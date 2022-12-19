@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&family=Rubik:wght@300&display=swap");
+:root {
+  --primary-bg-color: #14161d;
+  --primary-text-color: #272b33;
+  --secondary-bg-color: #242631;
+  --operator-text-color: #26f3cc;
+  --operator-icon-color: #f47a79;
+  --button-bg-color: #171a21;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: gray;
+}
+
+.button-wrapper {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 4;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+  position: relative;
+  background-color: var(--secondary-bg-color);
+  gap: 6px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.calculator-grid {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  outline: none;
+  background-color: var(--button-bg-color);
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+}
+button:hover {
+  background: #11151f;
+  box-shadow: 1px 2px 3px 2px #2c3038;
+}
+button.operator {
+  color: var(--operator-icon-color);
+}
+button.operator-text {
+  color: var(--operator-text-color);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: var(--primary-bg-color);
+  height: 160px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 16px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 20px;
+}
+.output .current-operand {
+  color: #fff;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
